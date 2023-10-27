@@ -104,6 +104,11 @@ h1 {
   color: #f9d3b4;
   font-family: var(--font-raleway);
 }
+.profile{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
 
 .container {
   width: 100%;

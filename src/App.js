@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import MovieCard from "./component/MovieCard";
 import searchIcon from "./search.svg";
+import img from "./img/new passport pic.png"
 
 const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=21c4f75d";
 
@@ -21,13 +22,14 @@ function App() {
   };
 
   useEffect(() => {
+    console.log(movies)
     searchMovies("superman");
   }, []);
 
   return (
     <div className="app">
       <h1>ZeusFlix</h1>
-      <img src="./src/snew passport pic.png" alt="passport" />
+      <img className="profile" src={img} alt="passport" />
 
       <div className="search">
         <form onSubmit={handleSubmit}>
@@ -37,9 +39,9 @@ function App() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button type="submit">
+          {/* <button type="submit">
             <img src={searchIcon} alt="search icons" />
-          </button>
+          </button> */}
         </form>
       </div>
 
